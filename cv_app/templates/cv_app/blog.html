@@ -1,0 +1,51 @@
+{% extends 'cv_app/base.html' %}
+{% block title %}Blog Page{% endblock %}
+
+{% block content %}
+
+<section style="overflow-y: scroll;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                {% for message in messages %}
+                <div class="text-center m-2 bg-success rounded">   
+                    <p class="text-uppercase">User: {{ message.name }} | Date: {{ message.time_create }}</p>
+                    <p>{{ message.email }}</p>
+                    <hr>
+                    <p>{{ message.message }}</p>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>    
+    </div>
+</section>
+<div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; First</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+   
+
+<div class="pagination bg-dark position-fixed p-1 rounded"
+style="top: 84%; right: 1%; border: 1px solid #ccc; z-index: 1000;">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}

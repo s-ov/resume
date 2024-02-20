@@ -1,0 +1,185 @@
+:root {
+  --color1:  #0d6efd;
+  --color2: #222020;
+  --color3: #edf3f3;
+  --clr-active: #060885;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+  margin: 0;
+  overflow: hidden;
+  height: auto;
+}
+
+#matrix-canvas {
+  position: static; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(51, 49, 49);
+}
+  
+.canvas-cover {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding: 10px;
+  color: var(--color1);
+  text-align: center;
+}
+
+.home {
+  margin: 2em;
+  font-size: 25px;
+  align-items: baseline;
+}
+
+.navbar-section {
+  position: fixed;
+  position: sticky;
+  width: 100%;
+}
+
+.user {
+    font: 20px bold;
+    font: italic bold 20px "Fira Sans", sans-serif;
+}
+    
+img.img-brand {
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  margin: 5px;
+}
+    
+a.mail {
+  margin-left: 0.5em;
+  color: var(--color3);
+}
+
+a.nav-link, a.login {
+  justify-content: flex-end;
+  font: italic bold 24px "Fira Sans", sans-serif;
+  color: var(--color3);
+  text-decoration: none;
+}
+
+a.nav-link:hover {
+  color: var(--clr-active);
+}
+    
+a.nav-link:active {
+  color: var(--clr-active);
+}
+    
+.container {
+  padding: auto;
+  width: 80vw;
+  height: 80vh;
+  color: var(--color3);
+  background-color: transparent;
+}
+
+.portfolio, .skills, .personal {
+  overflow-y: scroll;
+}
+
+img {
+  width: 50rem; 
+  height: 50rem; 
+  border-radius: 50%; 
+  margin: 5px;
+}
+#my_photo {
+  width: 300px;
+  height: auto;
+}
+
+h4 {
+  font-family: Stencil Std, fantasy;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.motto {
+  background-color: var(--color1);
+  border-radius: 10px;
+  width: fit-content;
+  margin-right: auto;
+  font-style: italic;
+  font-weight: 700;
+}
+    
+.btn-cv {
+  border: 3px solid var(--color1);
+  border-style: double;
+  color: var(--color3);
+  background-color: transparent;
+}
+
+.btn-cv:hover {
+  color: var(--color1);
+}
+    
+img.card-img-top {
+  width: 280px; 
+  height: 140px; 
+  border-radius: 50%; 
+  margin: 5px;
+}
+
+.skills h4 {
+  padding: 50px;
+  border: 5px solid var(--color1);
+  border-style: double;
+  border-radius: 10px;
+}
+
+.a_circle {
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border: 1px solid var(--color2);
+  border-radius: 50%;
+}
+
+a {
+  color: var(--color3);
+  text-decoration: none;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: var(--color1);
+  margin: 15px auto 30px;
+}
+
+.contact-form {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    overflow-y: scroll;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #CC0000;
+}

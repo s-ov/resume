@@ -1,0 +1,35 @@
+{% extends 'cv_app/base.html' %}
+{% load static %}
+{% block title %}S.Ovsiuk Personal Info{% endblock %}
+
+{% block content %}
+<section class="personal">
+     <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+               <img src="{% static 'cv_app/images/dima.jpg' %}" id="my_photo" >
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-sm-12">
+               <table class="table table-dark table-striped">
+                   <thead>
+                   <tr>
+                       <th scope="col" class="display-6">Title</th>
+                       <th scope="col" class="display-6">Content</th>
+                   </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in personal_info %}
+                        <tr>
+                          <td class="d-flex justify-content-start">{{ item.title }}</td>
+                          <td>{{ item.content }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

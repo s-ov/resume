@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+    <meta  http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{% static 'cv_app/css/bootstrap.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'cv_app/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/and_chr512.png' %}" type="image/x-icon">
+    <title>{% block title %}S.Ovsiuk CV{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+    <div class="canvas-cover">
+        {% include 'cv_app/partials/navbar.html' %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% include 'cv_app/partials/footer.html' %}
+    </div>
+    <script src="{% static 'cv_app/js/matrix.js' %}"></script>
+</body>
+</html>

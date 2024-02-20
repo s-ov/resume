@@ -1,0 +1,30 @@
+{% load static %}
+
+<section class="navbar-section">
+    <nav class="navbar navbar-primary bg-primary text-white">
+        <div class="container-fluid">
+            <ul class="nav nav-tabs">
+
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{% url 'home' %}">
+                        <img src="{% static 'cv_app/images/sunflower_4.jpeg' %}" class="img-brand" alt="sun">
+                    </a>
+                </li>
+
+                {% for m in mainmenu %}
+                <li class="nav-item"><a class="nav-link" href="{% url m.url_name %}">{{ m.name }}</a></li>  
+                {% endfor %}
+             
+            </ul>
+            <div class="d-flex">
+                {% if request.user.is_authenticated %}
+					<p class="user">{{ user.username }} | <a href="{% url 'logout_user' %}">Logout</a></p>
+				{% else %}
+					<p class="user">
+                        <a href="{% url 'register' %}">Register</a> | <a href="{% url 'login' %}">Login</a>
+                    </p>
+				{% endif %}
+            </div>
+        </div>
+    </nav>
+</section>

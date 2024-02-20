@@ -1,0 +1,23 @@
+{% extends 'cv_app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="home">
+    <div class="container">
+        <div class="row">
+            {% for item in profile %}
+            <div class="col-xl-9 col-lg-12">
+                <h4>{{ item.salutation }}</h4>
+                <p class="motto my-5">{{ item.motto }}</p>
+                <a download href="{{ item.cv_file.url }}" class="btn-cv">Download CV</a>
+            </div>
+            <div class="col-xl-3 col-lg-12">
+                <img src="{{ item.avatar.url }}" alt="ava1" class="img-fluid ava1">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

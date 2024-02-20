@@ -1,0 +1,77 @@
+{% extends 'cv_app/base.html' %}
+{% load static %}
+{% block title %}S.Ovsiuk's Portfolio{% endblock %}
+
+{% block content %}
+
+<section class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center text-white text-uppercase my-3">See my recent projects</h3>
+            </div>
+        </div>
+        <div class="row">
+            {% for item in portfolio %}
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <div class="a_circle"><img src="{{ item.logo.url }}" alt="logo" class="a_circle"></div>
+                <h5 class="text-center text-white"><a href="{{ item.project_url.url }}">{{ item.title }}</a></h5>
+                <div class="line"></div>
+            </div>
+            {% endfor %}
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><img src="{% static 'cv_app/images/ї_512.png' %}" alt="logo" class="a_circle"></div>-->
+<!--                <h5 class="text-center text-white"><a href="">Хрестоматія Української Літератури created with Django</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><img src="{% static 'cv_app/images/flask_512.png' %}" alt="logo" class="a_circle"></div>-->
+<!--                <h5 class="text-center text-white"><a href="">E-commerce project created with Flask</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><img src="{% static 'cv_app/images/tk_512.png' %}" alt="logo" class="a_circle"></div>-->
+<!--                <h5 class="text-center text-white"><a href="">Desktop App created with Tkinter</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><img src="{% static 'cv_app/images/dj_512.png' %}" alt="logo" class="a_circle"></div>-->
+<!--                <h5 class="text-center text-white"><a href="">E-commerce project created with Django</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><i class="icon-list-numbered"></i></div>-->
+<!--                <h5 class="text-center"><a href="">Structured Tutor</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><i class="icon-list-numbered"></i></div>-->
+<!--                <h5 class="text-center text-white"><a href="">E-commerce created with Django</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><i class="icon-list-numbered"></i></div>-->
+<!--                <h5 class="text-center text-white"><a href="">E-commerce created with Flask</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><i class="icon-list-numbered"></i></div>-->
+<!--                <h5 class="text-center text-white"><a href="">Desktop App created with Tkinter</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><i class="icon-list-numbered"></i></div>-->
+<!--                <h5 class="text-center text-white"><a href="">Structured Tutor</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-md-6 col-sm-12">-->
+<!--                <div class="a_circle"><i class="icon-list-numbered"></i></div>-->
+<!--                <h5 class="text-center"><a href="">Structured Tutor</a></h5>-->
+<!--                <div class="line"></div>-->
+<!--            </div>-->
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
